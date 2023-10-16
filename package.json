@@ -1,0 +1,29 @@
+{
+  "name": "hamburger_app",
+  "version": "1.0.0",
+  "description": "hamburger constructor",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "build": "gulp",
+    "watch": "gulp watch"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.22.19",
+    "@babel/preset-env": "^7.22.15",
+    "browser-sync": "^2.29.3",
+    "dotenv": "^16.3.1",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^8.0.0",
+    "gulp-babel": "^8.0.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-sass": "^5.1.0",
+    "gulp-uglify": "^3.0.2",
+    "gulp-uglifycss": "^1.1.0",
+    "gulp-webp": "^4.0.1",
+    "sass": "^1.67.0"
+  }
+}

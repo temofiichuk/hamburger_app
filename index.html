@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Hamburger</title>
+    <link rel="stylesheet" href="build/css/styles.css" />
+  </head>
+  <body>
+    <div id="app">
+      <div class="bg">
+        <img
+          class="top-right-shape"
+          src="build/images/app/top-right-shape.svg"
+          alt="design element" />
+        <img
+          class="bottom-left-shape"
+          src="build/images/app/bottom-left-shape.svg"
+          alt="design element" />
+      </div>
+
+      <div class="container">
+        <header>
+          <p>Super delicious</p>
+          <h1>Hamburger</h1>
+          <p>Exclusive</p>
+        </header>
+        <main>
+          <form action="#" name="hamburger">
+            <div class="wrapper">
+              <div class="choose-part">
+                <div class="size">
+                  <p>Choose Size</p>
+                  <input
+                    id="size-s"
+                    type="radio"
+                    name="size"
+                    value="SIZE_SMALL" />
+                  <label for="size-s"> S </label>
+                  <input
+                    id="size-l"
+                    type="radio"
+                    name="size"
+                    value="SIZE_LARGE" />
+                  <label for="size-l"> L </label>
+                </div>
+                <div class="components">
+                  <div class="stuffing">
+                    <p>Choose Stuffing</p>
+                    <input
+                      id="cheese"
+                      type="checkbox"
+                      name="stuffing"
+                      value="STUFFING_CHEESE"
+                      data-component="cheese" />
+                    <label for="cheese"> Cheese </label>
+                    <input
+                      id="salad"
+                      type="checkbox"
+                      name="stuffing"
+                      value="STUFFING_SALAD"
+                      data-component="salad" />
+                    <label for="salad"> Salad </label>
+                    <input
+                      id="tomato"
+                      type="checkbox"
+                      name="stuffing"
+                      value="STUFFING_TOMATO"
+                      data-component="tomato" />
+                    <label for="tomato"> Tomato </label>
+                    <input
+                      id="onion"
+                      type="checkbox"
+                      name="stuffing"
+                      value="STUFFING_ONION"
+                      data-component="onion" />
+                    <label for="onion"> Onion </label>
+                  </div>
+                  <div class="exclusive">
+                    <p>Exclusive</p>
+                    <input
+                      id="pineapple"
+                      type="checkbox"
+                      name="stuffing"
+                      value="STUFFING_PINEAPPLE"
+                      data-component="pineapple" />
+                    <label for="pineapple"> Pineapple </label>
+                  </div>
+                  <div class="topping">
+                    <p>Choose Topping</p>
+                    <input
+                      id="sauce"
+                      type="checkbox"
+                      name="topping"
+                      value="TOPPING_SAUCE"
+                      data-component="sauce" />
+                    <label for="sauce"> Sauce </label>
+                    <input
+                      id="mayo"
+                      type="checkbox"
+                      name="topping"
+                      value="TOPPING_MAYO"
+                      data-component="mayo" />
+                    <label for="mayo"> Mayo </label>
+                  </div>
+                  <div id="quantity">
+                    <p>Quantity</p>
+                    <div class="qty">
+                      <div class="inc"><span></span><span></span></div>
+                      <span class="qty-val">1</span>
+                      <div class="dec"><span></span></div>
+                    </div>
+                    <input type="hidden" name="quantity" value="1" />
+                  </div>
+                  <button type="submit">Buy</button>
+                </div>
+              </div>
+              <div id="hamburger">
+                <div id="hamburger_review" class="space-shadow"></div>
+                <div id="extra_box">
+                  <img
+                    data-index="1"
+                    style="z-index: 11; order: 1"
+                    src="build/images/burger_components/bun_top.svg"
+                    alt="bun_top" />
+                  <img
+                    data-index="2"
+                    style="z-index: 10; order: 2"
+                    src="build/images/burger_components/sauce.svg"
+                    alt="sauce" />
+                  <img
+                    data-index="3"
+                    style="z-index: 9; order: 3"
+                    src="build/images/burger_components/pineapple.svg"
+                    alt="pineapple" />
+                  <img
+                    data-index="4"
+                    style="z-index: 8; order: 4"
+                    src="build/images/burger_components/cheese.svg"
+                    alt="cheese" />
+                  <img
+                    data-index="5"
+                    style="z-index: 7; order: 5"
+                    src="build/images/burger_components/hamburger.svg"
+                    alt="hamburger" />
+                  <img
+                    data-index="6"
+                    style="z-index: 6; order: 6"
+                    src="build/images/burger_components/tomato.svg"
+                    alt="tomato" />
+
+                  <img
+                    data-index="7"
+                    style="z-index: 5; order: 7"
+                    src="build/images/burger_components/salad.svg"
+                    alt="salad" />
+
+                  <img
+                    data-index="8"
+                    style="z-index: 4; order: 8"
+                    src="build/images/burger_components/hamburger.svg"
+                    alt="hamburger2" />
+                  <img
+                    data-index="9"
+                    style="z-index: 3; order: 9"
+                    src="build/images/burger_components/onion.svg"
+                    alt="onion" />
+                  <img
+                    data-index="10"
+                    style="z-index: 2; order: 10"
+                    src="build/images/burger_components/mayo.svg"
+                    alt="mayo" />
+                  <img
+                    data-index="11"
+                    style="z-index: 1; order: 11"
+                    src="build/images/burger_components/bun_bottom.svg"
+                    alt="bun_bottom" />
+                </div>
+                <p class="quantity_review"></p>
+              </div>
+            </div>
+          </form>
+          <div class="values">
+            <div class="wrapper">
+              <p><span id="price"></span> Tughriks</p>
+              <p><span id="calories"></span> Calories</p>
+            </div>
+          </div>
+        </main>
+      </div>
+    </div>
+
+    <script src="build/js/main.min.js"></script>
+  </body>
+</html>
