@@ -1,0 +1,265 @@
+@import url("https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Lobster&family=Marck+Script&display=swap");
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+  /* Safari/Chrome, other WebKit */
+  -moz-box-sizing: border-box;
+  /* Firefox, other Gecko */
+  box-sizing: border-box;
+  position: relative;
+  padding: 0;
+  margin: 0; }
+
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  scroll-behavior: smooth; }
+
+ul,
+ol {
+  list-style: none; }
+
+a,
+a:active,
+a:hover {
+  text-decoration: none;
+  color: #000; }
+
+img {
+  max-width: 100%;
+  display: block; }
+
+select {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none; }
+  select::-ms-expand {
+    display: none; }
+
+button {
+  border: none;
+  background: transparent; }
+
+.non-scroll {
+  touch-action: none;
+  -ms-touch-action: none;
+  overflow: hidden;
+  height: 100%; }
+
+.container {
+  max-width: 1130px;
+  margin: 0 auto;
+  padding: 0 1rem; }
+
+* {
+  font-family: "Amatic SC", cursive; }
+
+body {
+  background: #202124; }
+
+#app {
+  min-height: 100vh;
+  transition: all 0.25s ease-in; }
+
+.bg {
+  background: url("../images/app/bg.webp") no-repeat center;
+  background-size: cover;
+  position: absolute;
+  width: 100%;
+  height: 100%; }
+  .bg [class*="shape"] {
+    position: absolute;
+    width: 20vw; }
+  .bg .top-right-shape {
+    top: 0;
+    right: 0; }
+  .bg .bottom-left-shape {
+    bottom: 0;
+    left: 0; }
+
+header {
+  padding: 2rem;
+  text-align: center; }
+  header p:first-child {
+    font-size: 30px; }
+  header h1 {
+    font-family: "Lobster", cursive;
+    color: #cd7a1d;
+    font-size: 62px; }
+  header p:last-child {
+    font-family: "Marck Script", cursive;
+    color: #ffffff; }
+
+.space-shadow {
+  animation: space 5s infinite; }
+
+@keyframes space {
+  0% {
+    bottom: 0;
+    box-shadow: 0 100px 41px -46px rgba(0, 0, 0, 0.5); }
+  50% {
+    bottom: 40px;
+    box-shadow: 0 140px 61px -66px rgba(0, 0, 0, 0.5); }
+  100% {
+    bottom: 0;
+    box-shadow: 0 100px 41px -46px rgba(0, 0, 0, 0.5); } }
+
+form[name="hamburger"] {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column; }
+  form[name="hamburger"] .wrapper {
+    display: flex;
+    justify-content: center;
+    width: 100%; }
+  form[name="hamburger"] #extra_box {
+    display: none; }
+  form[name="hamburger"] #hamburger_review {
+    width: 100%;
+    max-width: 140px;
+    display: flex;
+    flex-direction: column;
+    transition: all 0.5s ease-in-out; }
+    form[name="hamburger"] #hamburger_review img {
+      animation: opacity 1s;
+      transition: opacity 0.5s ease-in-out;
+      opacity: 1; }
+  form[name="hamburger"] .quantity_review {
+    bottom: 0;
+    position: absolute;
+    left: 50%;
+    font-size: 24px;
+    transform: translateX(-50%); }
+  form[name="hamburger"] .choose-part .size {
+    width: max-content;
+    display: flex;
+    align-items: center;
+    gap: 2rem; }
+  form[name="hamburger"] .choose-part,
+  form[name="hamburger"] .components {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem; }
+  form[name="hamburger"] input {
+    display: none; }
+  form[name="hamburger"] input:checked + label {
+    outline: 1px solid #ffffff; }
+  form[name="hamburger"] p {
+    color: #ffffff; }
+  form[name="hamburger"] label {
+    cursor: pointer;
+    padding: 0.5rem;
+    border-radius: 50%;
+    background: #cd7a1d;
+    min-width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+  form[name="hamburger"] .components {
+    display: none; }
+    form[name="hamburger"] .components.active {
+      display: flex; }
+    form[name="hamburger"] .components > div {
+      display: flex;
+      align-items: center;
+      gap: 1rem; }
+    form[name="hamburger"] .components label {
+      border-radius: 1rem; }
+  form[name="hamburger"] button {
+    width: 100%;
+    max-width: max-content;
+    border-radius: 1rem;
+    background: rgba(255, 255, 255, 0.4);
+    outline: 1px solid #ffffff;
+    padding: 4px 10px;
+    font-size: 26px;
+    cursor: pointer;
+    transition: all 0.35s; }
+    form[name="hamburger"] button:hover {
+      color: #ffffff;
+      background: #cd7a1d;
+      transform: scale(1.2); }
+
+main {
+  height: 100%;
+  min-height: calc(100vh - 200px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between; }
+  main .values {
+    display: none; }
+    main .values .wrapper {
+      display: flex;
+      gap: 1rem;
+      font-size: 34px;
+      color: #cd7a1d; }
+    main .values span {
+      color: #ffffff; }
+  main.size-selected .values {
+    display: block !important; }
+  main.size-selected .components {
+    display: flex !important; }
+  main.size-selected form[name="hamburger"] > .wrapper {
+    justify-content: space-around; }
+  main.completed .choose-part {
+    display: none; }
+  main.completed .space-shadow {
+    animation: unset; }
+  main.completed #hamburger {
+    width: 100%;
+    height: 50vh; }
+  main.completed #hamburger_review {
+    transition: all 0.5s ease-in;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: auto; }
+    main.completed #hamburger_review img {
+      margin: -24px 0; }
+    main.completed #hamburger_review > img:not([alt="bun_top"]):not([alt="bun_bottom"]) {
+      margin-top: -12px;
+      margin-bottom: -12px; }
+
+@keyframes opacity {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+
+#quantity .qty {
+  display: flex;
+  align-items: center;
+  gap: 1rem; }
+
+#quantity .qty-val {
+  padding: 4px; }
+
+#quantity .inc,
+#quantity .dec {
+  background: #cd7a1d;
+  border-radius: 50%;
+  width: auto;
+  padding: 15px;
+  cursor: pointer; }
+  #quantity .inc span,
+  #quantity .dec span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 10px;
+    height: 2.5px;
+    border-radius: 4px;
+    background: #202124; }
+  #quantity .inc:hover,
+  #quantity .dec:hover {
+    outline: 1px solid #ffffff; }
+
+#quantity .inc span:last-child {
+  transform: translate(-50%, -50%) rotate(90deg); }
